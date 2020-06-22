@@ -25,6 +25,9 @@
 /* Begin PBXFileReference section */
 		ABDB16FC24A129E50008EFCA /* PolymorphicClasses */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PolymorphicClasses; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB16FF24A129E50008EFCA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ABDB170624A129F30008EFCA /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		ABDB170724A12A090008EFCA /* array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
+		ABDB170924A12A4D0008EFCA /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				ABDB16FF24A129E50008EFCA /* main.cpp */,
+				ABDB170724A12A090008EFCA /* array.h */,
+				ABDB170624A129F30008EFCA /* stack.h */,
+				ABDB170924A12A4D0008EFCA /* queue.h */,
 			);
 			path = PolymorphicClasses;
 			sourceTree = "<group>";
