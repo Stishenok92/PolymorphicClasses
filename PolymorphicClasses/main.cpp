@@ -5,27 +5,53 @@
 
 int main()
 {
-    std::cout << "Choose a class to test:\n"
-    << "1. Class Stack\n"
-    << "2. Class Queue\n"
-    << "0. Exit\n"
-    << "\nEnter number: ";
-    int choise;
-    std::cin >> choise;
+
+    std::ifstream fin("Text.txt");
     
+    if (!fin)
+    {
+        std::cout << "Error open file!\n";
+        return 0;
+    }
     
+    fin.close();
     
+    while (true)
+    {
+        std::cout << "Choose a class to test:\n"
+        << "1. Class Stack\n"
+        << "2. Class Queue\n"
+        << "0. Exit\n"
+        << "\nEnter number: ";
+        int choise;
+        std::cin >> choise;
+        
+        switch (choise)
+        {
+            case 1:
+            {
+                size_t size;
+                std::cout << "\nEnter size stack: ";
+                std::cin >> size;
+                Array* stack = new Stack(size);
+                stack->menu();
+                break;
+            }
+            case 2:
+            {
+                size_t size;
+                std::cout << "\nEnter size queue: ";
+                std::cin >> size;
+                
+                break;
+            }
+                
+            default:
+            {
+                std::cout << "Enter right number!\n";
+            }
+        }
+    }
     
-    
-    
-    size_t size;
-    std::cout << "\nEnter size of array: ";
-    std::cin >> size;
-    Array* array = new Stack(size);
-    array->push(10);
-    array->push(20);
-    array->push(30);
-    array->print();
-    array->menu();
     return 0;
 }

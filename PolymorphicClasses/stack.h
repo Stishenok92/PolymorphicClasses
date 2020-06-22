@@ -15,6 +15,8 @@ public:
     bool isFull() const override;
     void push(const int) override;
     int pop() override;
+    friend std::ostream& operator<<(std::ostream&, const Stack&);
+    friend std::istream& operator>>(std::istream&, Stack&);
     void print() const override;
     void menu() override;
 };
@@ -92,19 +94,44 @@ int Stack:: pop()
     return 0;
 }
 
+std::ostream& operator<<(std::ostream& out, const Stack& stack)
+{
+    if (!stack.isEmpty())
+    {
+        out << "Stack has view:\n";
+        
+        for (int i = static_cast<int>(stack.top) - 1; i >= 0; i--)
+        {
+            out << stack.array[i] << "\n";
+        }
+    }
+    
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, Stack& stack)
+{
+    int temp;
+    
+    while (!in.eof())
+    {
+        if (!stack.isFull())
+        {
+            in >> temp;
+            stack.push(temp);
+        }
+        else
+        {
+            return in;
+        }
+    }
+    
+    return in;
+}
+
 void Stack:: print() const
 {
-    if (!isEmpty())
-    {
-        std::cout << "Stack has view:\n";
-        
-        for (size_t i = 0; i < top; i++)
-        {
-            std::cout << array[i] << " ";
-        }
-        
-        std::cout << "\n";
-    }
+    std::cout << *this;
 }
 
 void Stack:: menu()
@@ -114,7 +141,8 @@ void Stack:: menu()
         std::cout << "\nОperations:\n"
         << "1. Print\n"
         << "2. Push\n"
-        << "3. Pop\n"
+        << "3. Push from file\n"
+        << "4. Pop\n"
         << "0. Exit\n"
         << "\nEnter operation: ";
         size_t choise;
@@ -141,6 +169,13 @@ void Stack:: menu()
                 break;
             }
             case 3:
+            {
+                std::ifstream fin("Text.txt");
+                fin >> *this;
+                fin.close();
+                break;
+            }
+            case 4:
             {
                 pop();
                 break;
