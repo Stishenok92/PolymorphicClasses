@@ -22,15 +22,9 @@ public:
     void menu();
 };
 
-Array:: Array(): size(10), array(new int[size] {0}) //конструктор без параметров
-{
-    
-}
+Array:: Array(): size(10), array(new int[size] {0}) {} //конструктор без параметров
 
-Array:: Array(size_t _size): size(_size), array(new int[size] {0}) //конструктор с параметром size_t
-{
-    
-}
+Array:: Array(size_t _size): size(_size), array(new int[size] {0}) {} //конструктор с параметром size_t
 
 Array:: Array(const Array& temp) //конструктор с параметром Array
 {
@@ -78,7 +72,6 @@ void Array:: menu()
         << "\nEnter operation: ";
         size_t choise;
         std::cin >> choise;
-        std::cout << "\n";
 
         switch (choise)
         {

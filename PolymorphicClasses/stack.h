@@ -18,15 +18,9 @@ public:
     std::istream& read(std::istream&) override;
 };
 
-Stack:: Stack(): Array(), top(0)
-{
-    
-}
+Stack:: Stack(): Array(), top(0) {}
 
-Stack:: Stack(size_t _size): Array(_size), top(0)
-{
-    
-}
+Stack:: Stack(size_t _size): Array(_size), top(0) {}
 
 Stack:: Stack(const Stack& temp)
 {
@@ -36,10 +30,7 @@ Stack:: Stack(const Stack& temp)
     top = temp.top;
 }
 
-Stack:: ~Stack()
-{
-    
-}
+Stack:: ~Stack() {}
 
 Stack& Stack:: operator=(const Stack& temp)
 {

@@ -5,7 +5,8 @@
 
 int main()
 {
-
+    std::cout << "Polymorphic Classes\n";
+    
     std::ifstream fin("Text.txt"); //проверка открытия файла
     
     if (!fin)
@@ -18,7 +19,7 @@ int main()
     
     while (true) //меню
     {
-        std::cout << "Choose a class to test:\n"
+        std::cout << "\nChoose a class to test:\n"
         << "1. Class Stack\n"
         << "2. Class Queue\n"
         << "0. Exit\n"
@@ -31,7 +32,7 @@ int main()
             case 1: //тест класса Stack
             {
                 size_t size;
-                std::cout << "\nEnter size stack: ";
+                std::cout << "Enter size stack: ";
                 std::cin >> size;
                 Array* array = new Stack(size);
                 array->menu();
@@ -40,7 +41,7 @@ int main()
             case 2: //тест класса Queue
             {
                 size_t size;
-                std::cout << "\nEnter size queue: ";
+                std::cout << "Enter size queue: ";
                 std::cin >> size;
 //                Array* array = new Queue(size);
 //                array->menu();
