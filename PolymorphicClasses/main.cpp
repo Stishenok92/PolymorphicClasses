@@ -6,7 +6,7 @@
 int main()
 {
 
-    std::ifstream fin("Text.txt");
+    std::ifstream fin("Text.txt"); //проверка открытия файла
     
     if (!fin)
     {
@@ -16,7 +16,7 @@ int main()
     
     fin.close();
     
-    while (true)
+    while (true) //меню
     {
         std::cout << "Choose a class to test:\n"
         << "1. Class Stack\n"
@@ -28,7 +28,7 @@ int main()
         
         switch (choise)
         {
-            case 1:
+            case 1: //тест класса Stack
             {
                 size_t size;
                 std::cout << "\nEnter size stack: ";
@@ -37,12 +37,13 @@ int main()
                 stack->menu();
                 break;
             }
-            case 2:
+            case 2: //тест класса Queue
             {
                 size_t size;
                 std::cout << "\nEnter size queue: ";
                 std::cin >> size;
-                
+//                Array* queue = new Queue(size);
+//                queue->menu();
                 break;
             }
                 
