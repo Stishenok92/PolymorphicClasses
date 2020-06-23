@@ -43,17 +43,16 @@ int main()
                 size_t size;
                 std::cout << "Enter size queue: ";
                 std::cin >> size;
-//                Array* array = new Queue(size);
-//                array->menu();
+                Array* array = new Queue(size);
+                array->menu();
                 break;
             }
-            default: //отсутсвующий выбор
+            default:
             {
                 std::cout << "Enter right number!\n";
             }
         }
     }
     
-    system("pause");
     return 0;
 }
