@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <fstream>
-class Array //абстрактный класс
+class Array
 {
 protected:
     size_t size;

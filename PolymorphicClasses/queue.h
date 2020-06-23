@@ -118,7 +118,6 @@ std::istream& Queue:: read(std::istream& in)
         {
             in >> temp;
             push(temp);
-            
         }
         else
         {

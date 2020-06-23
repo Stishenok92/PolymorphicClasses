@@ -29,6 +29,10 @@ int main()
     
         switch (choise)
         {
+            case 0: //выход из программы
+            {
+                return 0;
+            }
             case 1: //тест класса Stack
             {
                 size_t size;
