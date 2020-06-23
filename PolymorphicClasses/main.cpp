@@ -25,7 +25,7 @@ int main()
         << "\nEnter number: ";
         int choise;
         std::cin >> choise;
-        
+    
         switch (choise)
         {
             case 1: //тест класса Stack
@@ -33,8 +33,8 @@ int main()
                 size_t size;
                 std::cout << "\nEnter size stack: ";
                 std::cin >> size;
-                Array* stack = new Stack(size);
-                stack->menu();
+                Array* array = new Stack(size);
+                array->menu();
                 break;
             }
             case 2: //тест класса Queue
@@ -42,17 +42,17 @@ int main()
                 size_t size;
                 std::cout << "\nEnter size queue: ";
                 std::cin >> size;
-//                Array* queue = new Queue(size);
-//                queue->menu();
+//                Array* array = new Queue(size);
+//                array->menu();
                 break;
             }
-                
-            default:
+            default: //отсутсвующий выбор
             {
                 std::cout << "Enter right number!\n";
             }
         }
     }
     
+    system("pause");
     return 0;
 }
